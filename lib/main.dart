@@ -1,3 +1,4 @@
+import 'package:desafio_servicos_wtf/telas/detail_screen.dart';
 import 'package:desafio_servicos_wtf/telas/hire_screen.dart';
 import 'package:desafio_servicos_wtf/telas/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'App Manutenção',
       routes: {
         "/loginScreen": (context) => LoginScreen(),
-        "/hireScreen": (context) => HireScreen()
+        "/hireScreen": (context) => HireScreen(),
+        "/detailScreen": (context) => DetailScreen(),
       },
-      initialRoute: "/hireScreen",
+      initialRoute: "/loginScreen",
     );
   }
 }

@@ -71,7 +71,7 @@ class HireScreen extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: Container(
             height: 75,
-            color: Color.fromRGBO(47, 47, 47, 1),
+            color: Color.fromRGBO(71, 71, 71, 1),
             child: Row(
               children: [
                 Container(
@@ -97,7 +97,9 @@ class HireScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/detailScreen");
+        },
         child: Icon(Icons.my_location),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -111,345 +113,350 @@ class ContractorList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView(
-        children: [
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "1",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, "/detailScreen");
+        },
+        child: ListView(
+          children: [
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "1",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/aparecida.png",
-                        height: 50,
-                        width: 50,
-                      ),
-                    )
-                  ],
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/aparecida.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Aparecida Veloso Falcão",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Aparecida Veloso Falcão",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Eletricista",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Eletricista",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              color: Color.fromRGBO(255, 255, 255, 0.3),
+              indent: 100,
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "2",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/eder.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              )
-            ],
-          ),
-          Divider(
-            height: 30,
-            thickness: 1,
-            color: Color.fromRGBO(255, 255, 255, 0.3),
-            indent: 100,
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "2",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Eder dos Reis de Souza",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/eder.png",
-                        height: 50,
-                        width: 50,
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Encanador",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    )
-                  ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              color: Color.fromRGBO(255, 255, 255, 0.3),
+              indent: 100,
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "3",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/lucas.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Eder dos Reis de Souza",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Lucas de Souza",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Encanador",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Gesso",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              color: Color.fromRGBO(255, 255, 255, 0.3),
+              indent: 100,
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "4",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/kleber.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              )
-            ],
-          ),
-          Divider(
-            height: 30,
-            thickness: 1,
-            color: Color.fromRGBO(255, 255, 255, 0.3),
-            indent: 100,
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "3",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Kleber Souza da Silva",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/lucas.png",
-                        height: 50,
-                        width: 50,
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Encanador",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    )
-                  ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              color: Color.fromRGBO(255, 255, 255, 0.3),
+              indent: 100,
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "5",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/bruno.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Lucas de Souza",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Bruno Silva Pessoa",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Gesso",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Encanador",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              color: Color.fromRGBO(255, 255, 255, 0.3),
+              indent: 100,
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 18),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 8, left: 16),
+                        child: Text(
+                          "6",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(9),
+                        child: Image.asset(
+                          "assets/images/andre.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              )
-            ],
-          ),
-          Divider(
-            height: 30,
-            thickness: 1,
-            color: Color.fromRGBO(255, 255, 255, 0.3),
-            indent: 100,
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "4",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5),
+                        child: Text(
+                          "Andre Cesar Caliari",
+                          style: GoogleFonts.roboto(
+                              color: Colors.white, fontSize: 18),
+                        ),
                       ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/kleber.png",
-                        height: 50,
-                        width: 50,
+                      Container(
+                        margin: EdgeInsets.only(top: 2, bottom: 2),
+                        child: Text(
+                          "Eletricista",
+                          style: GoogleFonts.roboto(
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                              fontSize: 16),
+                        ),
                       ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Kleber Souza da Silva",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Encanador",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          Divider(
-            height: 30,
-            thickness: 1,
-            color: Color.fromRGBO(255, 255, 255, 0.3),
-            indent: 100,
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "5",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/bruno.png",
-                        height: 50,
-                        width: 50,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Bruno Silva Pessoa",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Encanador",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          Divider(
-            height: 30,
-            thickness: 1,
-            color: Color.fromRGBO(255, 255, 255, 0.3),
-            indent: 100,
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 18),
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 8, left: 16),
-                      child: Text(
-                        "6",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(9),
-                      child: Image.asset(
-                        "assets/images/andre.png",
-                        height: 50,
-                        width: 50,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 5),
-                      child: Text(
-                        "Andre Cesar Caliari",
-                        style: GoogleFonts.roboto(
-                            color: Colors.white, fontSize: 18),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2, bottom: 2),
-                      child: Text(
-                        "Eletricista",
-                        style: GoogleFonts.roboto(
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontSize: 16),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
