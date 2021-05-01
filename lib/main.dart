@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         "/loginScreen": (context) => LoginScreen(),
         "/hireScreen": (context) => HireScreen()
       },
-      initialRoute: "/loginScreen",
+      initialRoute: "/hireScreen",
     );
   }
 }
